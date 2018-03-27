@@ -1,0 +1,16 @@
+.storeButtons {
+    text-align: center;
+}
+
+#servicetitle {
+    text-align: left;
+}
+
+#storeJumbo {
+    color: white;
+    background-image: url('../../../Assets/images/giammarco-boscaro.jpg');
+    background-size: cover;
+    height:600px;
+    font-family: lato;
+    text-shadow: black;
+}

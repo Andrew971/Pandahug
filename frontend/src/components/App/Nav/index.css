@@ -1,0 +1,23 @@
+.navbar-brand {
+    font-family: lato;
+    font-size: 50px;
+    color: #37474F;
+    font-weight: 900;
+    position: relative;
+    top: -25px;
+   
+    
+  }
+
+  .nav-link {
+    font-family: lato;
+   
+  }
+ 
+  #pandabologo {
+    border-radius: 50%;
+    vertical-align: -15px;
+}
+
+
+
