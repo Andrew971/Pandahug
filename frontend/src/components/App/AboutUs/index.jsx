@@ -20,9 +20,9 @@ export default class AboutUs extends Component {
 
             <div className="jumbotron" id="aboutUsJumbo" align="center" >
               <div id="overlay"></div>
-              <h2 className="display-4" id="h2about">Pandahug is an Educational Consulting Service based in Vancouver, Canada.</h2>
+              <h2 className="display-4" id="h2about">Pandahug is an Educational Consulting Service based in Vancouver, Canada</h2>
                 <h2 id="h2about2">We support you in your educational and career goals</h2>
-                <h2 id="h2about3">in Canada and the United States.</h2>
+                <h2 id="h2about3">in Canada and the United States</h2>
 
               {/* </div> */}
             </div>
