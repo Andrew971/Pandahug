@@ -20,7 +20,7 @@ export default class Footer extends Component {
   </div>
   <div className="card-body">
     <h5 className="card-title">Be strong. Ask us for help.</h5>
-    <p className="card-text">The universally loved Panda is Black, White and Asian. We are Pandahug because we embrace diversity and inclusiveness in our company culture and our customers.  We deliver academic, emotional and social support so that you can move forwards and upwards with clarity and focus. We believe success is the achievement of our unique golden means.</p>
+    <p className="card-text">The universally loved Panda is Black, White and Asian. We are called Pandahug because we embrace diversity and inclusiveness in our company culture and our customers.  We deliver academic, emotional and social support so that you can move forwards and upwards with clarity and focus. We believe success is the achievement of our unique golden means.</p>
     <ModalContactUs contactForm={this.props.contactForm}/>
     Or email us directly: info@pandahug.ca
   </div>
