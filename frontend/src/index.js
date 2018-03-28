@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 //Import the React Router Components
 import {
     BrowserRouter as Router,
@@ -16,6 +15,3 @@ ReactDOM.render(
         <Route path='/' component={App} />
     </Router>,
     document.getElementById('root'));
-
-registerServiceWorker();
-
