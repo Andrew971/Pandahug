@@ -104,7 +104,7 @@ render() {
 
   return (
     <div>
-      <div className="container">
+      <div className="container-fluid">
 
         <div className="jumbotron" align="center" id="searchJumbo" >
           {/* <div className="container"> */}
@@ -156,10 +156,7 @@ render() {
         <hr />
 
 
-        <div>
-
-
-
+        <div className="searchForm">
 
           <form
             // action="/search" method="POST"
@@ -261,7 +258,7 @@ render() {
           <SearchResults searchItems={this.state.searchItems}/>
          
         </div>
- <div>
+      <div className="toptenUni">
           <h4 id="topten">Top 10 Universities in the World 2018</h4>
           <ListGroup>
             <ListGroupItem>#1      Massachusetts Institute of Technology (MIT)</ListGroupItem>

@@ -28,4 +28,21 @@
     height:600px;
     font-family: lato;
     text-shadow: black;
+    /* margin-left: 5px; */
+    
+}
+
+.searchForm {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.toptenUni {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.container-fluid{
+    margin:0;
+    padding:0;
 }
