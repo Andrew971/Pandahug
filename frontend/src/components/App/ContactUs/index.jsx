@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import ChatbotContactUs from '../ChatbotContactUs';
 import Footer from '../Footer';
+import Chatbox from '../../../js/chatbox';
+import {contactus} from '../../../js/chatbox/contactus'
 import './index.css';
 
 
 export default class ContactUs extends Component {
 
-
-  //   render() {
-  //       return (
-
   render() {
 
     return (
-      
-      
-      
-      
+
+
+
+
       <div>
-      
-      
+
+
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -41,10 +38,10 @@ export default class ContactUs extends Component {
           </div>
         </div>
 
-      
-      
-      
- 
+
+
+
+
       <form ref={(self)=>{this.contactForm=self}}>
         <div className="form-row" class="container">
           <div className="col-7">
@@ -65,23 +62,23 @@ export default class ContactUs extends Component {
 
           <div className="col-10">
             <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Questions/Comments: the more information you provide us, the better we can be prepared to help." name="comments"></textarea>
-          </div>      
+          </div>
         </div>
       </form>
       <div className="col-12">
           <button type="submit" className="btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModalCenter"
             onClick={()=>{this.props.contactForm(this.contactForm.userName.value, this.contactForm.age.value, this.contactForm.email.value, this.contactForm.phone.value, this.contactForm.language.value, this.contactForm.comments.value)}}
-           
+
             >Submit</button>
           </div>
-          
+
 
          <div>
             <Footer />
 			</div>
 
           <div className="chatbot">
-      <ChatbotContactUs />
+            <Chatbox steps={contactus} />
       </div>
       </div>
 

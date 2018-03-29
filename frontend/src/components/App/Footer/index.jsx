@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
 import ModalContactUs from '../ModalContactUs';
 import './index.css';
 
@@ -9,10 +8,10 @@ export default class Footer extends Component {
 
     render() {
         return (
-            
-            
-            
-            
+
+
+
+
             <div className="container-fluid">
             <div className="card text-center" >
   <div className="card-header" id="universitas">
@@ -37,6 +36,6 @@ export default class Footer extends Component {
 
         )
     }
-  
+
 
 }

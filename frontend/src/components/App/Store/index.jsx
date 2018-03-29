@@ -1,10 +1,9 @@
-
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
-import ChatbotStore from '../ChatbotStore';
 import Services from './Services';
 import Products from './Products';
-import Footer from '../Footer';
+import Chatbox from '../../../js/chatbox';
+import {store} from '../../../js/chatbox/store'
 import './index.css';
 
 
@@ -12,44 +11,30 @@ import './index.css';
 export default class Store extends Component {
 
     render() {
-        // console.log(this.props.store)
 
         let serviceList = this.props.store.filter((item) => {
-            if (item.type === "service") {
-                return item
-            }
+            return item.type === "service"
         })
 
         let productList = this.props.store.filter((item) => {
-            if (item.type === "product") {
-                return item
-            }
-        })
-        let cartList = this.props.store.filter((item) => {
-            if (item.add === true) {
-                return item
-            }
+            return item.type === "product"
+
         })
 
 
-        // console.log(productList)
         return (
 
-   
-           
-            
+
+
+
 
             <div className="container-fluid">
 
-               
+
 
                         <div className="jumbotron" align="center" id="storeJumbo" >
-                            {/* <div className="container"> */}
                             <div id="overlay"></div>
                             <h1 className="display-4">Hit the Ground Running</h1>
-
-
-                            {/* </div> */}
                         </div>
 
                 <h1>{this.props.name}</h1>
@@ -60,11 +45,7 @@ export default class Store extends Component {
                     <Link to="/store/testprep">
                         <button type="button" className="btn btn-secondary btn-lg">TEST PREPARATION</button>
                     </Link>
-                    {/* <Link to="/cart">
-                        <button type="button" className="btn btn-tertiary btn-lg" disabled>CART</button>
-
-
-                    </Link> */}
+                    
                 </div>
                 <Switch>
 
@@ -77,15 +58,13 @@ export default class Store extends Component {
                 </Switch>
 
                 <div>
-                    <Footer />
                 </div>
                 <div className="chatbot">
-                    <ChatbotStore />
+                  <Chatbox steps={store} />
                 </div>
             </div>
-           
+
         )
     }
 
 }
-

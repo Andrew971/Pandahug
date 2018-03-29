@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import ChatbotDashboard from '../ChatbotDashboard';
 import './index.css';
-import { Switch, Route, Link } from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input, FormText, ListGroup, ListGroupItem } from 'reactstrap';
-import Footer from '../Footer';
+import Chatbox from '../../../js/chatbox';
+import {search} from '../../../js/chatbox/search'
+
+import {Label, ListGroup, ListGroupItem } from 'reactstrap';
 import SearchResults from '../Search/SearchResults';
 import axios from 'axios';
 
@@ -57,12 +57,12 @@ export default class Search extends Component {
     let studyValuable = event.target.studyValuable.value;
     let studyCountry = event.target.studyCountry.value;
     console.log(studyLevel, studyValuable, studyCountry)
-  
-    
 
 
-  
-  
+
+
+
+
   }
 
 
@@ -79,7 +79,7 @@ export default class Search extends Component {
 
 
     console.log(studyLevel, studyCommon, studyCountry)
-   
+
     axios.post('http://localhost:8080/search', {
       level: studyLevel,
       subject: studyCommon,
@@ -97,8 +97,8 @@ export default class Search extends Component {
 
 
   }
- 
-  
+
+
 
 render() {
 
@@ -110,7 +110,7 @@ render() {
           {/* <div className="container"> */}
           <div id="overlay"></div>
           <h1 className="display-4">Find your Dream School</h1>
-          
+
 
           {/* </div> */}
         </div>
@@ -120,7 +120,7 @@ render() {
           name="search" onSubmit={(event) => { this.searchResultValuable(event) }}>
           <Label for="BestSchools">The Best Schools with Valuable Majors for 2020: </Label>
           <select name='studyLevel'>
-        
+
             <option value="undergrad">Undergraduate</option>
             <option value="postgrad">Graduate</option>
 
@@ -163,7 +163,7 @@ render() {
             name="search"  onSubmit={(event) => { this.searchResultCommon(event) }}>
             <Label for="BestSchools">The Top Schools with Commonly Searched Majors:</Label>
             <select name='studyLevel' id='levels'>
-             
+
               <option value="undergrad">Undergraduate</option>
               <option value="postgrad">Graduate</option>
 
@@ -172,7 +172,7 @@ render() {
               <Label for="CommonSubjects"  >Majors</Label>
               <option value="accounting-finance" >Accounting and Finance</option>
               <option value="agriculture-forestry"  >Agriculture and Forestry </option>
-              
+
               <option value="anatomy-physiology" >Anatomy and Physiology</option>
               <option value="anthropology" >Anthropology</option>
               <option value="archaeology" >Archaeology</option>
@@ -251,12 +251,12 @@ render() {
           <hr />
 
         </div>
-         
-       
+
+
         <div>
-          
+
           <SearchResults searchItems={this.state.searchItems}/>
-         
+
         </div>
       <div className="toptenUni">
           <h4 id="topten">Top 10 Universities in the World 2018</h4>
@@ -277,14 +277,10 @@ render() {
 
 
       </div>
-       
-      
-      <div>
-        <Footer />
-      </div>
+
 
       <div className="chatbot">
-        <ChatbotDashboard />
+        <Chatbox steps={search} />
       </div>
 
 

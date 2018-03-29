@@ -4,14 +4,10 @@ import Maths from '../Assets/images/Math.png'
 import Chem from '../Assets/images/Chemistry.png'
 import Physics from '../Assets/images/Physics.png'
 import SAT from '../Assets/images/SAT.png'
-import destination from '../Assets/images/destination.jpg'
-import HelloWorld from '../Assets/images/HelloWorld.png'
-import PandahuggerRescue from '../Assets/images/PandahuggerRescue.png'
-import PositiveAttitude from '../Assets/images/PositiveAttitude.png'
 import Success from '../Assets/images/Success.png'
-import worryingRocking from '../Assets/images/worryingRocking.png'
 import IELTS from '../Assets/images/IELTS.png'
 import TOEFL from '../Assets/images/TOEFL.png'
+import Amazon from '../Assets/images/Amazon.png'
 
 export const store = [
   {
@@ -86,44 +82,44 @@ export const store = [
    type: "service",
    key: 9
  },
-//  {
-//    title: 'Style: Ten Lessons in Clarity and Grace',
-//    picture: Amazon,
-//    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//    cost: 100,
-//    type: "product",
-//    key: 10
-//  },
-//  {
-//     title: 'SAT Test Prep Textbook',
-//     picture: Amazon,
-//     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//     cost: 100,
-//     type: "product",
-//     key: 11
-//   },
-//   {
-//     title: 'ACT Test Prep Textbook',
-//     picture: Amazon,
-//     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//     cost: 100,
-//     type: "product",
-//     key: 12
-//   },
-//   {
-//     title: 'TOEFL Test Prep Textbook',
-//     picture: Amazon,
-//     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//     cost: 100,
-//     type: "product",
-//     key: 13
-//   },
-//   {
-//     title: 'Fundamentals of English Grammar',
-//     picture: Amazon,
-//     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-//     cost: 100,
-//     type: "product",
-//     key: 14
-//   }
+ {
+   title: 'Style: Ten Lessons in Clarity and Grace',
+   picture: Amazon,
+   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+   cost: 100,
+   type: "product",
+   key: 10
+ },
+ {
+    title: 'SAT Test Prep Textbook',
+    picture: Amazon,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    cost: 100,
+    type: "product",
+    key: 11
+  },
+  {
+    title: 'ACT Test Prep Textbook',
+    picture: Amazon,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    cost: 100,
+    type: "product",
+    key: 12
+  },
+  {
+    title: 'TOEFL Test Prep Textbook',
+    picture: Amazon,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    cost: 100,
+    type: "product",
+    key: 13
+  },
+  {
+    title: 'Fundamentals of English Grammar',
+    picture: Amazon,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    cost: 100,
+    type: "product",
+    key: 14
+  }
 ]
