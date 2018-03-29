@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ChatbotHome from '../ChatbotHome';
+import Chatbox from '../../../js/chatbox';
+import {home} from '../../../js/chatbox/home'
+
 import Prepare from '../../../Assets/images/Prepare.png';
 import Apply from '../../../Assets/images/Apply.png';
 import Succeed from '../../../Assets/images/Succeed.png';
-import ModalContactUs from '../ModalContactUs';
-import Footer from '../Footer';
 import Jumbotron from '../Jumbotron'
 import './index.css';
 
@@ -13,13 +13,13 @@ export default class Home extends Component {
 
 
 		return (
-			
+
 			<div>
 			<div>
 			<Jumbotron />
 			</div>
-			
-			
+
+
 
 				<div className="container">
 
@@ -27,27 +27,27 @@ export default class Home extends Component {
                     <div id="mission">
 					<h2>Our Mission </h2>
 					<h5>
-						We live in a dynamic age of technology-driven changes that very quickly redefines how we learn and communicate. At Pandahug, we embrace technological and scientific advancement as well as a humanistic future. 
+						We live in a dynamic age of technology-driven changes that very quickly redefines how we learn and communicate. At Pandahug, we embrace technological and scientific advancement as well as a humanistic future.
 					</h5>
-					<h5>			
+					<h5>
 						Pandahug leverages technology to tailor your learning program to your unique needs and provide a positive and highly effective online learning experience. We provide you with clear achievable goals that guide you to reach previously unimaginable success.</h5>
                     </div>
-	
-					
+
+
 						<div className="card">
-							<img className="card-img-top"  src={Prepare} alt="Card image cap" />
+							<img className="card-img-top"  src={Prepare} alt="Card cap" />
 							<div className="card-body">
 								<h2 className="card-title">Prepare</h2>
 								<h6 className="card-text">Academic Planning</h6>
 								<h6 className="card-text">Career Strategy</h6>
 								<h6 className="card-text">Academic Subject Tutoring</h6>
 								<h6 className="card-text">TOEFL/IELTS/SAT/ACT Workshops</h6>
-								
+
 							</div>
-							
+
 						</div>
 						<div className="card">
-							<img className="card-img-top"  src={Apply} alt="Card image cap" />
+							<img className="card-img-top"  src={Apply} alt="Card cap" />
 							<div className="card-body">
 								<h2 className="card-title">Apply</h2>
 								<h6 className="card-text">University Application Support</h6>
@@ -56,10 +56,10 @@ export default class Home extends Component {
 								<h6 className="card-text">Interview/Public Speaking Training</h6>
 								<h6 className="card-text">Immigration Consulting</h6>
 							</div>
-							
+
 						</div>
 						<div className="card">
-							<img className="card-img-top" src={Succeed} alt="Card image cap" />
+							<img className="card-img-top" src={Succeed} alt="Card cap" />
 							<div className="card-body">
 								<h2 className="card-title">Succeed</h2>
 								<h6 className="card-text">Networking</h6>
@@ -67,7 +67,7 @@ export default class Home extends Component {
 								<h6 className="card-text">Leadership and Mentoring</h6>
 								<h6 className="card-text">Social Responsibility</h6>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
@@ -91,7 +91,7 @@ export default class Home extends Component {
 				</div>
 
 				<div className="card">
-				
+
 					<div className="card-header">
 						Secondary Student in Vancouver, BC
   				</div>
@@ -115,17 +115,14 @@ export default class Home extends Component {
 					</div>
 				</div>
              </div>
-                <div>
-            <Footer />
-			</div>
 
 				<div className="chatbot">
-					<ChatbotHome />
-					
+					<Chatbox steps={home} />
+
 				</div>
-				
+
 			</div>
-            
+
 		)
 	}
 }
