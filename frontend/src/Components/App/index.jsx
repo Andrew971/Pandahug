@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Search from './Search'
 import Home from './Home'
-import ContactUs from './ContactUs'
-import AboutUs from './AboutUs'
+import {AboutUs} from './AboutUs'
 import Store from './Store'
-import Cart from './Cart'
-import Nav from './Nav'
-import Footer from './Footer';
+import {Nav} from './Nav'
+import {Footer} from './Footer';
 
-import { Switch, Route } from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import axios from 'axios'
 import {store} from '../../js/products'
 import {contact} from '../../js/api'
 
-
-class App extends Component {
+export default class App extends Component {
 
   constructor() {
     super()
 
-    this.state =
-    {
+    this.state = {
       cart: [],
-      cartQty: 0,
+      cartQty: 0
     }
 
   }
@@ -36,51 +32,34 @@ class App extends Component {
       phone: phone,
       language: language,
       comments: comments
-    })
-    .then(function (response) {
+    }).then(function(response) {
       console.log(response);
-    })
-    .catch(function (error) {
+    }).catch(function(error) {
       console.log(error);
     });
   }
 
   render() {
-    let { match } = this.props
-    return (
-      <div className="container-fluid">
-        <Nav contactForm={this.contactForm}/>
-        <Switch>
-          <Route exact path="/" render={
-            (routeProps) => {
-              return <Home {...routeProps} />
-            }
-          } />
-
-          <Route path={match.url + 'search'} exact component={Search} />
-
-          <Route path={match.url + 'search/:searchId'} component={Search} />
-          <Route path={match.url + 'aboutus'} exact component={AboutUs} />
-          <Route path={match.url + 'ContactUs'} render={() => {
-            return <ContactUs contactForm={this.contactForm}  />
+    let {match} = this.props
+    return (<div className="container-fluid">
+      <Nav contactForm={this.contactForm}/>
+      <Switch>
+        <Route exact="exact" path="/" render={(routeProps) => {
+            return <Home {...routeProps}/>
           }}/>
 
+        <Route path={match.url + 'search'} exact="exact" component={Search}/>
 
-          <Route path={match.url + 'store'} render={() => {
-            return <Store userName={this.state.userName} store={store} />
-          }} />
-          <Route path={match.url + 'cart'} render={() => {
-            return <Cart cart={this.state.cart} />
-          }} />
+        <Route path={match.url + 'search/:searchId'} component={Search}/>
+        <Route path={match.url + 'aboutus'} exact="exact" component={AboutUs}/>
 
-        </Switch>
-        <Footer />
+        <Route path={match.url + 'store'} render={() => {
+            return <Store userName={this.state.userName} store={store}/>
+          }}/>
 
-      </div>
-    );
+      </Switch>
+      <Footer/>
+
+    </div>);
   }
 }
-
-
-
-export default App;
