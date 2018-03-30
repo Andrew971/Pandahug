@@ -1,28 +1,13 @@
-
-import React, { Component } from 'react';
+import React from 'react';
 
 import './index.css';
 
+export const Jumbotron = () => {
 
-export default class Jumbotron extends Component {
-
-    render() {
-        return (
-
-
-
-
-<div className="jumbotron" align="center" >
-          {/* <div className="container"> */}
-          <div id="overlay"></div>
-            <h1 className="display-4">Prepare. Apply. Succeed.</h1>
-            <h3>Aspire for Happiness in Education.</h3>
-            <h3>Find your dream school. Hit the ground running. Lead with excellence.</h3>
-
-          {/* </div> */}
-          </div>
-
-
-        )
-    }
-}
+    return (<div className="jumbotron" align="center">
+      <div id="overlay"></div>
+      <h1 className="display-4">Prepare. Apply. Succeed.</h1>
+      <h3>Aspire for Happiness in Education.</h3>
+      <h3>Find your dream school. Hit the ground running. Lead with excellence.</h3>
+    </div>)
+  }
