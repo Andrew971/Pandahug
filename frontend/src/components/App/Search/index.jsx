@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './index.css';
 import Chatbox from '../../../js/chatbox';
 import {search} from '../../../js/chatbox/search'
+import Jumbotron from '../../../js/Jumbotron'
 
 import {Label, ListGroup, ListGroupItem} from 'reactstrap';
 import SearchResults from '../Search/SearchResults';
@@ -40,17 +41,14 @@ export default class Search extends Component {
   render() {
 
     return (<div>
-      <div className="container-fluid">
 
-        <div className="jumbotron" align="center" id="searchJumbo">
-          <div id="overlay"></div>
+        <Jumbotron id="searchJumbo">
           <h1 className="display-4">Find your Dream School</h1>
+        </Jumbotron>
 
-        </div>
-
-        <hr/>
 
         <div className="searchForm">
+          <hr/>
 
           <form
             // action="/search" method="POST"
@@ -170,7 +168,6 @@ export default class Search extends Component {
 
         </div>
 
-      </div>
 
       <div className="chatbot">
         <Chatbox steps={search}/>

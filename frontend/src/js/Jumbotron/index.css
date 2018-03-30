@@ -1,0 +1,11 @@
+
+
+.jumbotron {
+    color: white;
+    background-image: url('../../Assets/images/caleb-woods.jpg');
+    background-size: cover;
+    height:700px;
+    font-family: lato;
+    text-align: center;
+    text-shadow: black;
+}

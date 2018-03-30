@@ -5,16 +5,18 @@ import {home} from '../../../js/chatbox/home'
 import Prepare from '../../../Assets/images/Prepare.png';
 import Apply from '../../../Assets/images/Apply.png';
 import Succeed from '../../../Assets/images/Succeed.png';
-import {Jumbotron} from '../Jumbotron'
+import Jumbotron from '../../../js/Jumbotron'
 import './index.css';
 
 export default class Home extends Component {
   render() {
 
     return (<div>
-      <div>
-        <Jumbotron/>
-      </div>
+      <Jumbotron>
+        <h1 className="display-4">Prepare. Apply. Succeed.</h1>
+        <h3>Aspire for Happiness in Education.<br/>
+          Find your dream school. Hit the ground running. Lead with excellence.</h3>
+      </Jumbotron>
 
       <div className="container">
 
@@ -110,7 +112,6 @@ export default class Home extends Component {
 
       <div className="chatbot">
         <Chatbox steps={home}/>
-
       </div>
 
     </div>)
