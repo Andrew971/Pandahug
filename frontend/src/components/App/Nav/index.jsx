@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import {ModalContactUs} from '../ModalContactUs';
-// import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+
 import './index.css';
 
 export const Nav = (contactForm) => {

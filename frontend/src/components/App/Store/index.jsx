@@ -45,7 +45,7 @@ export default class Store extends Component {
                     <Link to="/store/testprep">
                         <button type="button" className="btn btn-secondary btn-lg">TEST PREPARATION</button>
                     </Link>
-                    
+
                 </div>
                 <Switch>
 
