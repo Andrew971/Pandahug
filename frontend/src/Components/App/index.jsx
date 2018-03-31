@@ -24,7 +24,7 @@ export default class App extends Component {
   }
 
   contactForm = (userName, age, email, phone, language, comments) => {
-
+    console.log('ok')
     axios.post(contact, {
       userName: userName,
       age: age,
@@ -33,28 +33,31 @@ export default class App extends Component {
       language: language,
       comments: comments
     }).then(function(response) {
-      console.log(response);
+      // console.log(response);
     }).catch(function(error) {
-      console.log(error);
+      // console.log(error);
     });
   }
 
   render() {
     let {match} = this.props
     return (<div className="container-fluid">
-      <Nav contactForm={this.contactForm}/>
+      <Nav/>
       <Switch>
-        <Route exact="exact" path="/" render={(routeProps) => {
-            return <Home {...routeProps}/>
+        <Route exact path="/" render={(routeProps) => {
+            return <Home {...routeProps} contactForm={this.contactForm}/>
           }}/>
-
-        <Route path={match.url + 'search'} exact="exact" component={Search}/>
-
-        <Route path={match.url + 'search/:searchId'} component={Search}/>
-        <Route path={match.url + 'aboutus'} exact="exact" component={AboutUs}/>
-
-        <Route path={match.url + 'store'} render={() => {
-            return <Store userName={this.state.userName} store={store}/>
+        <Route path={match.url + 'search'} render={(routeProps) => {
+            return <Search {...routeProps} contactForm={this.contactForm}/>
+          }}/>
+        <Route path={match.url + 'search/:searchId'} render={(routeProps) => {
+            return <Search {...routeProps} contactForm={this.contactForm}/>
+          }}/>
+        <Route path={match.url + 'aboutus'} render={(routeProps) => {
+            return <AboutUs {...routeProps} contactForm={this.contactForm}/>
+          }}/>
+        <Route path={match.url + 'store'} render={(routeProps) => {
+            return <Store {...routeProps} contactForm={this.contactForm} userName={this.state.userName} store={store}/>
           }}/>
 
       </Switch>

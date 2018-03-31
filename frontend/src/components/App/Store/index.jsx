@@ -19,9 +19,10 @@ export default class Store extends Component {
       return item.type === "product"
 
     })
+    const {contactForm} = this.props
 
     return (<div>
-    <Jumbotron id="storeJumbo">
+    <Jumbotron id="storeJumbo" contactForm={contactForm}>
       <h1 className="display-4">Hit the Ground Running</h1>
     </Jumbotron>
 

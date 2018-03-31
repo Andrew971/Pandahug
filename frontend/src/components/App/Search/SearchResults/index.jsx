@@ -7,7 +7,7 @@ import './index.css';
 
 export default class SearchResults extends Component {
 
-    
+
     render() {
         let itemsJSX = this.props.searchItems.map((item, i) => {
            return(
@@ -15,15 +15,8 @@ export default class SearchResults extends Component {
                <tr key={i}>
                    <td>{item.ranking}</td>
                    <td>{item.University}</td>
-                   
+
                 </tr>
-
-            //    <ListGroup key={i} >
-            //        <ListGroupItem>{item.University}{item.ranking}</ListGroupItem>
-            //    </ListGroup>
-
-
-           
            )
         })
         return (
@@ -35,13 +28,13 @@ export default class SearchResults extends Component {
                         <tr>
                             <th>World Ranking</th>
                             <th>Universities</th>
-                                        
+
                     </tr>
                  </thead>
 
                     <tbody>
-                        {itemsJSX} 
-                        
+                        {itemsJSX}
+
                         </tbody>
                 </Table>
             </div>

@@ -6,12 +6,12 @@ export const about =
 {
     id: '0',
     component: (
-        <div> <img src={HelloWorld} id="pandabologo" width="60" height="60" class="d-inline-block align-center" alt="" /> </div>
+        <div> <img src={HelloWorld} id="pandabologo" width="60" height="60" className="d-inline-block align-center" alt="" /> </div>
     ),
-    trigger: '1',
+    trigger: 1,
 },
 {
-id: '1',
+id: 1,
 message: 'Which is grammatically correct?',
 trigger: '2',
 },
@@ -72,7 +72,7 @@ trigger: '5',
 {
     id: '11',
     message: 'Hmmm...try again.',
-    trigger: '',
+    trigger: '10',
 },
 {
     id: '12',

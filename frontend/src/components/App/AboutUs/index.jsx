@@ -7,10 +7,10 @@ import applyicon from '../../../Assets/images/applyicon.png';
 import succeedicon from '../../../Assets/images/successicon.png';
 import Jumbotron from '../../../js/Jumbotron'
 
-export const AboutUs = () => {
+export const AboutUs = (props) => {
 
   return (<div>
-    <Jumbotron id="aboutUsJumbo">
+    <Jumbotron id="aboutUsJumbo" contactForm={props.contactForm}>
       <h2 className="display-4" id="h2about">Pandahug is an Educational Consulting Service based in Vancouver, Canada.</h2>
       <h2 id="h2about2">We support you in your educational and career goals</h2>
       <h2 id="h2about3">in Canada and the United States.</h2>

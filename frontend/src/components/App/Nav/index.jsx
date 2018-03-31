@@ -1,44 +1,47 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {ModalContactUs} from '../ModalContactUs';
+import {NavLink} from 'react-router-dom';
 
 import './index.css';
 
 export const Nav = (contactForm) => {
 
-  return (<div className="container">
-    <nav className="nav">
-      <Link className="navbar-brand" to="/">
+  return (
+    <nav className="navbar navbar-expand-md navbar-light bg-light">
+      <NavLink className="navbar-brand" to="/">
         Pandahug
-      </Link>
-      <ul className="nav justify-content-end">
+      </NavLink>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+         <span className="navbar-toggler-icon"></span>
+       </button>
+      <div className="collapse navbar-collapse" id="navbarText">
+        <ul className="navbar-nav mr-auto">
 
-        <li className="nav-item">
-          <Link to="/search">
-            <h5 className="nav-link">
-              School Finder
-            </h5>
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/store">
-            <h5 className="nav-link">
-              Services
-            </h5>
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/aboutus">
-            <h5 className="nav-link">
-              About
-            </h5>
-          </Link>
-        </li>
-      </ul>
-
-      <ModalContactUs contactForm={contactForm}/>
-
+          <li className="nav-item">
+            <NavLink to="/search">
+              <h5 className="nav-link">
+                School Finder
+              </h5>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/store">
+              <h5 className="nav-link">
+                Services
+              </h5>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/aboutus">
+              <h5 className="nav-link">
+                About
+              </h5>
+            </NavLink>
+          </li>
+        </ul>
+        <span className="navbar-text">
+    space for social media
+   </span>
+      </div>
     </nav>
-
-  </div>)
+  )
 }

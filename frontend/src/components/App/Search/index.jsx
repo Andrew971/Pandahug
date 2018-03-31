@@ -30,19 +30,20 @@ export default class Search extends Component {
       subject: studyCommon,
       country: studyCountry
     }).then((response) => {
-      console.log(response.data)
+      // console.log(response.data)
       this.setState({searchItems: response.data})
     }).catch(function(error) {
-      console.log(error);
+      // console.log(error);
     });
 
   }
 
   render() {
+    const {contactForm} = this.props
 
     return (<div>
 
-        <Jumbotron id="searchJumbo">
+        <Jumbotron id="searchJumbo" contactForm={contactForm}>
           <h1 className="display-4">Find your Dream School</h1>
         </Jumbotron>
 
@@ -51,11 +52,11 @@ export default class Search extends Component {
           <hr/>
 
           <form
-            // action="/search" method="POST"
+            action="/search" method="POST"
             name="search" onSubmit={(event) => {
               this.searchResultCommon(event)
             }}>
-            <Label for="BestSchools">The Top Schools with Commonly Searched Majors:</Label>
+            <Label htmlFor="BestSchools">The Top Schools with Commonly Searched Majors:</Label>
             <select name='studyLevel' id='levels'>
 
               <option value="undergrad">Undergraduate</option>
@@ -63,7 +64,6 @@ export default class Search extends Component {
 
             </select>
             <select name='studyCommon' id="majors">
-              <Label for="CommonSubjects">Majors</Label>
               <option value="accounting-finance">Accounting and Finance</option>
               <option value="agriculture-forestry">Agriculture and Forestry
               </option>
@@ -131,7 +131,6 @@ export default class Search extends Component {
 
             </select>
             <select name='studyCountry' id='countries'>
-              <Label for="Country">Country</Label>
               <option value="canada">Canada</option>
               <option value="united-states">United States</option>
 
@@ -170,7 +169,7 @@ export default class Search extends Component {
 
 
       <div className="chatbot">
-        <Chatbox steps={search}/>
+        <Chatbox steps={search} />
       </div>
 
     </div >)
