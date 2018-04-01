@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import ModalContactUs from '../../../js/modals/ModalContactUs';
 
 import './index.css';
 
@@ -37,6 +38,8 @@ export const Nav = (contactForm) => {
               </h5>
             </NavLink>
           </li>
+          <ModalContactUs contactForm={contactForm}/>
+
         </ul>
         <span className="navbar-text">
     space for social media

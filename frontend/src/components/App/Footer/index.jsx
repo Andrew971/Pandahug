@@ -1,5 +1,5 @@
 import React from 'react';
-import {ModalContactUs} from '../ModalContactUs';
+import ModalContactUs from '../../../js/modals/ModalContactUs';
 import './index.css';
 
 export const Footer = (contactForm)=> {
