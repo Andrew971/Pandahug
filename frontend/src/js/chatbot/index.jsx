@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
+import { ThemeProvider } from 'styled-components';
+
 import './chatbot.css';
+import {theme} from './theme';
 
 
 export default class Chatbox extends Component {
@@ -20,7 +23,7 @@ export default class Chatbox extends Component {
 const {steps}=this.props
 
       return (
-    <ChatBot steps={steps} opened={this.state.status} floating={true} hideBotAvatar={true} hideHeader={false} toggleFloating={() => { this.mytoggle() }} className="chatbot"/>
+    <ThemeProvider theme={theme}><ChatBot steps={steps} opened={this.state.status} floating={true} hideBotAvatar={true} hideHeader={false} toggleFloating={() => { this.mytoggle() }} className="chatbot"/></ThemeProvider>
       )
     }
 }

@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import Chatbot from '../../../js/chatbot';
-import {home} from '../../../js/chatbox/home'
+import {home} from '../../../js/chatbot/home'
 
 import {Prepare, Apply, Succeed} from '../../../js/content/services'
 import {Mission} from '../../../js/content/mission'

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './index.css';
 import Chatbot from '../../../js/chatbot';
-import {search} from '../../../js/chatbox/search'
+import {search} from '../../../js/chatbot/search'
 import Jumbotron from '../../../js/Jumbotron'
 
 import {Label, ListGroup, ListGroupItem} from 'reactstrap';

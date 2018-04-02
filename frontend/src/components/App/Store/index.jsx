@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {Switch, Route, Link} from 'react-router-dom'
 import Services from './Services';
 import Products from './Products';
-import Chatbox from '../../../js/chatbox';
-import {store} from '../../../js/chatbox/store'
+import Chatbot from '../../../js/chatbot';
+import {store} from '../../../js/chatbot/store'
 import './index.css';
 import Jumbotron from '../../../js/Jumbotron'
 
@@ -46,10 +46,7 @@ export default class Store extends Component {
           }}/>
       </Switch>
 
-      <div></div>
-      <div className="chatbot">
-        <Chatbox steps={store}/>
-      </div>
+        <Chatbot steps={store}/>
     </div>)
   }
 

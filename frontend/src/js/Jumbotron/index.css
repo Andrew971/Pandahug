@@ -1,12 +1,36 @@
-
-
 .jumbotron {
     color: white;
     background-image: url('../../Assets/images/caleb-woods.jpg');
     background-size: cover;
-    height:700px;
+    height:80vh;
     font-family: lato;
     text-align: center;
     text-shadow: black;
     border-radius:0;
+}
+
+#searchJumbo {
+    background-image: url('../../Assets/images/vadim-sherbakov.jpg');
+}
+
+#storeJumbo {
+    background-image: url('../../Assets/images/giammarco-boscaro.jpg');
+}
+#aboutUsJumbo {
+  background-image: url('../../Assets/images/lighthouse.png');
+}
+
+#h2about {
+  font-family: lato;
+  text-align: right;
+}
+
+#h2about2 {
+  font-family: lato;
+  text-align: right;
+}
+
+#h2about3 {
+  font-family: lato;
+  text-align: right;
 }
