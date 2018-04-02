@@ -1,8 +1,14 @@
 import React from "react";
 
+const Arrow = {
+  // fontSize: '5rem',
+  textAlign: 'center',
+  // color:'blue',
+  margin:'1rem 0 5rem 0'
+}
 export const Mission = () => {
   return (
-    <div id="mission">
+    <div style={Arrow}>
       <h2>Our Mission
       </h2>
       <h5>

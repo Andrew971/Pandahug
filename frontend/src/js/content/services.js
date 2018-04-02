@@ -3,6 +3,14 @@ import Prepare_img from '../../Assets/images/Prepare.png';
 import Apply_img from '../../Assets/images/Apply.png';
 import Succeed_img from '../../Assets/images/Succeed.png';
 
+const Arrow = {
+  animation: 'Bounce 1s cubic-bezier(.5,0.05,1,.5) infinite alternate',
+  fontSize: '5rem',
+  textAlign: 'center',
+  // color:'blue'
+  margin:'5rem 0'
+}
+
 export const Prepare = () => {
   return (<Fragment>
     <div className="col-md-6">
