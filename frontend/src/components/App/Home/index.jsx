@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Chatbox from '../../../js/chatbox';
 import {home} from '../../../js/chatbox/home'
-import {Testimonial1, Testimonial2, Testimonial3} from '../../../js/testimonials'
+import {Testimonial1, Testimonial2, Testimonial3} from '../../../js/content/testimonials'
 import Prepare from '../../../Assets/images/Prepare.png';
 import Apply from '../../../Assets/images/Apply.png';
 import Succeed from '../../../Assets/images/Succeed.png';
