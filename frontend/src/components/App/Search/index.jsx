@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './index.css';
-import Chatbox from '../../../js/chatbox';
+import Chatbot from '../../../js/chatbot';
 import {search} from '../../../js/chatbox/search'
 import Jumbotron from '../../../js/Jumbotron'
 
@@ -168,10 +168,8 @@ export default class Search extends Component {
         </div>
 
 
-      <div className="chatbot">
-        <Chatbox steps={search} />
-      </div>
+        <Chatbot steps={search} />
 
-    </div >)
+    </div>)
   }
 }

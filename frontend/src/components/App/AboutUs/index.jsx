@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import './index.css';
-import Chatbox from '../../../js/chatbox';
+import Chatbot from '../../../js/chatbot';
 import {about} from '../../../js/chatbox/about'
 import {About} from '../../../js/content/about'
 
@@ -37,8 +37,6 @@ export const AboutUs = (props) => {
 
     </div>
 
-    <div className="chatbot">
-      <Chatbox steps={about}/>
-    </div>
+      <Chatbot steps={about}/>
   </Fragment>)
 }

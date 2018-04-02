@@ -1,11 +1,9 @@
 import React, {Component, Fragment} from 'react';
-import Chatbox from '../../../js/chatbox';
+import Chatbot from '../../../js/chatbot';
 import {home} from '../../../js/chatbox/home'
-
 
 import {Prepare, Apply, Succeed} from '../../../js/content/services'
 import {Mission} from '../../../js/content/mission'
-
 
 import Jumbotron from '../../../js/Jumbotron'
 import Cards from '../../../js/Cards'
@@ -36,10 +34,7 @@ export default class Home extends Component {
         </div>
       </div>
 
-
-      <div className="chatbot">
-        <Chatbox steps={home}/>
-      </div>
+      <Chatbot steps={home}/>
 
     </Fragment>)
   }
