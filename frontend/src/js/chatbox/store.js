@@ -6,7 +6,7 @@ export const store=[
   {
     id: '0',
     component: (
-      <div> <img src={HelloWorld} id="pandabologo" width="60" height="60" class="d-inline-block align-center" alt="" /> </div>
+      <div> <img src={HelloWorld} id="pandabologo" width="60" height="60" className="d-inline-block align-center" alt="" /> </div>
     ),
     trigger: '1',
   },

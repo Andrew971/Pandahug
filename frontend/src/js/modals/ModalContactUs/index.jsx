@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-export const ModalContactUs = () => {
+export default class ModalContactUs extends Component {
 
+render(){
+  const {contactForm} = this.props
   return (<div>
     <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
       Book your FREE initial Consultation
     </button>
 
-    <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
@@ -48,30 +50,30 @@ export const ModalContactUs = () => {
           <div className="modal-footer">
             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" className="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter" onClick={() => {
-                this.props.contactForm(this.contactForm.userName.value, this.contactForm.age.value, this.contactForm.email.value, this.contactForm.phone.value, this.contactForm.language.value, this.contactForm.comments.value)
+                contactForm(this.contactForm.userName.value, this.contactForm.age.value, this.contactForm.email.value, this.contactForm.phone.value, this.contactForm.language.value, this.contactForm.comments.value)
               }}>Save changes</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Thank you!
+    <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div className="modal-dialog modal-dialog-centered" role="document">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="exampleModalLongTitle">Thank you!
             </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
+          <div className="modal-body">
             <h5>An advisor will reach out to you in two business days.</h5>
             <h5>Check out our chatbots on each page for frequently asked questions and learning games!</h5>
 
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <div className="modal-footer">
+            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
 
           </div>
         </div>
@@ -79,4 +81,5 @@ export const ModalContactUs = () => {
     </div>
 
   </div>)
+}
 }

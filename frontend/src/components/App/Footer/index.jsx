@@ -1,10 +1,10 @@
 import React from 'react';
-import {ModalContactUs} from '../ModalContactUs';
+import ModalContactUs from '../../../js/modals/ModalContactUs';
 import './index.css';
 
 export const Footer = (contactForm)=> {
 
-    return (<div className="card text-center">
+    return (<div className="card text-center" style={{marginTop:'2rem'}}>
       <div className="card-header" id="universitas">
         <h2>Pandahug</h2>
       </div>

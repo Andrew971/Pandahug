@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './index.css';
 import Chatbox from '../../../js/chatbox';
 import {search} from '../../../js/chatbox/search'
+import Jumbotron from '../../../js/Jumbotron'
 
 import {Label, ListGroup, ListGroupItem} from 'reactstrap';
 import SearchResults from '../Search/SearchResults';
@@ -29,35 +30,33 @@ export default class Search extends Component {
       subject: studyCommon,
       country: studyCountry
     }).then((response) => {
-      console.log(response.data)
+      // console.log(response.data)
       this.setState({searchItems: response.data})
     }).catch(function(error) {
-      console.log(error);
+      // console.log(error);
     });
 
   }
 
   render() {
+    const {contactForm} = this.props
 
     return (<div>
-      <div className="container-fluid">
 
-        <div className="jumbotron" align="center" id="searchJumbo">
-          <div id="overlay"></div>
+        <Jumbotron id="searchJumbo" contactForm={contactForm}>
           <h1 className="display-4">Find your Dream School</h1>
+        </Jumbotron>
 
-        </div>
-
-        <hr/>
 
         <div className="searchForm">
+          <hr/>
 
           <form
-            // action="/search" method="POST"
+            action="/search" method="POST"
             name="search" onSubmit={(event) => {
               this.searchResultCommon(event)
             }}>
-            <Label for="BestSchools">The Top Schools with Commonly Searched Majors:</Label>
+            <Label htmlFor="BestSchools">The Top Schools with Commonly Searched Majors:</Label>
             <select name='studyLevel' id='levels'>
 
               <option value="undergrad">Undergraduate</option>
@@ -65,7 +64,6 @@ export default class Search extends Component {
 
             </select>
             <select name='studyCommon' id="majors">
-              <Label for="CommonSubjects">Majors</Label>
               <option value="accounting-finance">Accounting and Finance</option>
               <option value="agriculture-forestry">Agriculture and Forestry
               </option>
@@ -133,7 +131,6 @@ export default class Search extends Component {
 
             </select>
             <select name='studyCountry' id='countries'>
-              <Label for="Country">Country</Label>
               <option value="canada">Canada</option>
               <option value="united-states">United States</option>
 
@@ -170,10 +167,9 @@ export default class Search extends Component {
 
         </div>
 
-      </div>
 
       <div className="chatbot">
-        <Chatbox steps={search}/>
+        <Chatbox steps={search} />
       </div>
 
     </div >)
