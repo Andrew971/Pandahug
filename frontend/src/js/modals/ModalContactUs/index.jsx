@@ -42,7 +42,7 @@ render(){
                 <div className="col-10">
                   <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Questions/Comments: Where is your dream school? What do you want to be when grow up? The more information you provide us, the better we can be prepared to help." name="comments"></textarea>
                 </div>
-                <a href="privacy-policy" >test to privacy</a>
+                <a href="privacy-policy" >Privacy Policy</a>
                 <div className="col-11"></div>
               </div>
             </form>
@@ -52,6 +52,7 @@ render(){
             <button type="button" className="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalCenter" onClick={() => {
                 contactForm(this.contactForm.userName.value, this.contactForm.age.value, this.contactForm.email.value, this.contactForm.phone.value, this.contactForm.language.value, this.contactForm.comments.value)
               }}>Save changes</button>
+              Or email us directly: info@pandahug.ca
           </div>
         </div>
       </div>
