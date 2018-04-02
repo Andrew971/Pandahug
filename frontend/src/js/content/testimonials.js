@@ -2,8 +2,7 @@ import React from "react";
 
 export const Testimonial1 = () => {
   return (
-    <div className="card">
-      <div className="card-header">Business Owner in Vancouver, BC</div>
+    <div className="">
       <div className="card-body">
         <blockquote className="blockquote mb-0">
           <p>
@@ -15,13 +14,13 @@ export const Testimonial1 = () => {
           </p>
         </blockquote>
       </div>
+      <div className="" align="right">Business Owner in Vancouver, BC</div>
     </div>
   );
 };
 export const Testimonial2 = () => {
   return (
-    <div className="card">
-      <div className="card-header">Secondary Student in Vancouver, BC</div>
+    <div className="">
       <div className="card-body">
         <blockquote className="blockquote mb-0">
           <p>
@@ -36,13 +35,13 @@ export const Testimonial2 = () => {
           </p>
         </blockquote>
       </div>
+      <div className="" align="right">Secondary Student in Vancouver, BC</div>
     </div>
   );
 };
 export const Testimonial3 = () => {
   return (
-    <div className="card">
-      <div className="card-header">University Student in Vancouver, BC</div>
+    <div className="">
       <div className="card-body">
         <blockquote className="blockquote mb-0">
           <p>
@@ -59,6 +58,7 @@ export const Testimonial3 = () => {
           </p>
         </blockquote>
       </div>
+      <div className="" align="right">University Student in Vancouver, BC</div>
     </div>
   );
 };

@@ -42,8 +42,8 @@ render(){
                 <div className="col-10">
                   <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Questions/Comments: Where is your dream school? What do you want to be when grow up? The more information you provide us, the better we can be prepared to help." name="comments"></textarea>
                 </div>
+                <a href="privacy-policy" >test to privacy</a>
                 <div className="col-11"></div>
-
               </div>
             </form>
           </div>

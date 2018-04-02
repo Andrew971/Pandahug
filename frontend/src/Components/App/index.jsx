@@ -5,7 +5,7 @@ import {AboutUs} from './AboutUs'
 import Store from './Store'
 import {Nav} from './Nav'
 import {Footer} from './Footer';
-
+import {PrivacyPolicy} from '../../js/content/privacy-policy'
 import {Switch, Route} from 'react-router-dom'
 import axios from 'axios'
 import {store} from '../../js/products'
@@ -58,6 +58,9 @@ export default class App extends Component {
           }}/>
         <Route path={match.url + 'store'} render={(routeProps) => {
             return <Store {...routeProps} contactForm={this.contactForm} userName={this.state.userName} store={store}/>
+          }}/>
+        <Route path={match.url + 'privacy-policy'} render={(routeProps) => {
+            return <PrivacyPolicy {...routeProps} />
           }}/>
 
       </Switch>
