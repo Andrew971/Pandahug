@@ -5,7 +5,7 @@ export default class ModalContactUs extends Component {
 render(){
   const {contactForm} = this.props
   return (<div>
-    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style={{borderRadius:'40rem'}}>
       Book your FREE initial Consultation
     </button>
 

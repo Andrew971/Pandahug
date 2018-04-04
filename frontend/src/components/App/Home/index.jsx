@@ -10,6 +10,7 @@ import Cards from '../../../js/Cards'
 import './index.css';
 
 export default class Home extends Component {
+
   render() {
     const {contactForm} = this.props
     return (<Fragment>

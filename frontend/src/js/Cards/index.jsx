@@ -5,9 +5,10 @@ const Style = {
   selfAlign: 'center',
   textAlign: 'center',
   // marginTop: '7rem',
-  borderTop: 'solid 0.5rem',
-  borderBottom: 'solid 0.5rem',
+  // borderTop: 'solid 0.5rem',
+  // borderBottom: 'solid 0.5rem',
   padding: '1rem',
+  marginTop: '5rem',
 }
 
 const Arrow = {
@@ -29,9 +30,7 @@ export default class Cards extends Component {
           {Children.only(children)}
         </div>
       </div>
-      <div className="col-lg-12" style={Arrow}>
-        <i className="fas fa-arrow-down"></i>
-      </div>
+
     </Fragment>);
   }
 }
