@@ -1,20 +1,25 @@
 .navbar-brand {
-    font-family: lato;
-    font-size: 2rem;
-    color: #37474F;
-    font-weight: 900;
-    margin-right: 5rem;
-  }
+  font-family: lato;
+  font-size: 2rem;
+  color: #37474F;
+  font-weight: 900;
+  /* margin-right: 5rem; */
+}
 
-  .nav-link {
-    font-family: lato;
-    margin: auto;
-  }
+.nav-link {
+  font-family: lato;
+  margin: auto;
+}
 
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
-.nav {
-  padding:1rem;
+.navbar{
+  /* padding: 2rem 5rem; */
+
+}
+
+.navbar-text{
+  float:right;
 }
