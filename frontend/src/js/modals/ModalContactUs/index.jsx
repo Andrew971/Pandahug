@@ -6,7 +6,7 @@ render(){
   const {contactForm} = this.props
   return (<div>
     <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style={{borderRadius:'40rem'}}>
-      Book your FREE initial Consultation
+    Get your Free Consultation
     </button>
 
     <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
