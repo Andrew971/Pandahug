@@ -19,14 +19,12 @@ export const About = () => {
 export const Freelence = () => {
   return (
     <div className="col-6 card">
-
       <div className="d-flex w-100 justify-content-between">
         <h5 className="mb-1">Freelance Tutors</h5>
         <small>Various Subjects: Math/Calculus, Chemistry, Physics</small>
       </div>
       <p className="mb-1">Did you graduate from a top 10 university in either Canada or the US? Are you passionate about education, mentorship and technology? We would love to hear from you!</p>
       <p>Send us your CV/resume and cover letter: jobs@pandahug.ca</p>
-
     </div>
   );
 };
