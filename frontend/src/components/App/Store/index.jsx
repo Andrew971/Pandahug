@@ -1,7 +1,6 @@
 import React, {Component,Fragment} from 'react';
 import Chatbot from '../../../js/chatbot';
 import {ChatStore} from '../../../js/chatbot/store'
-import './index.css';
 import Jumbotron from '../../../js/Jumbotron'
 import Cards from '../../../js/Cards'
 import {Services,Products} from '../../../js/content/services'
