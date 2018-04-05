@@ -16,13 +16,13 @@ export default class Store extends Component {
       <Jumbotron id="storeJumbo" contactForm={contactForm}>
         <h1 className="display-4">Hit the Ground Running</h1>
       </Jumbotron>
-        <Cards color="red">
+        <Cards color="">
           <Mission/>
         </Cards>
-        <Cards color="blue">
+        <Cards color="">
           <Services contactForm={contactForm}/>
         </Cards>
-        <Cards color="green">
+        <Cards color="">
           <Products contactForm={contactForm}/>
         </Cards>
       <Chatbot steps={ChatStore}/>
