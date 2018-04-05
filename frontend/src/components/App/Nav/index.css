@@ -12,7 +12,7 @@ nav{
   font-size: 2rem;
   color: #37474F;
   font-weight: 900;
-  /* margin-right: 5rem; */
+  margin-right: 0;
 }
 .nav_menu{
   /* position:absolute;

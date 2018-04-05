@@ -1,6 +1,7 @@
 .card-img-top {
   object-fit: cover;
-  width: 300px;
-  height: 350px;
+  width: 20rem;
+  height:15rem;
   align-self: center;
+  /* border-radius:50%; */
 }

@@ -6,7 +6,7 @@ import Succeed_img from '../../Assets/images/Succeed.png';
 export const Prepare = () => {
   return (<Fragment>
     <div className="col-md-6">
-      <img className="card-img-top" src={Prepare_img} alt="Card cap"/>
+      <img className="img-fluid card-img-top" src={Prepare_img} alt="Card cap"/>
     </div>
     <div className="col-md-6 card-body">
       <h2 className="card-title">Prepare</h2>
@@ -22,7 +22,7 @@ export const Prepare = () => {
 export const Apply = () => {
   return (<Fragment>
     <div className="col-md-6 order-md-last">
-      <img className="card-img-top" src={Apply_img} alt="Card cap"/>
+      <img className="img-fluid card-img-top" src={Apply_img} alt="Card cap"/>
     </div>
     <div className="col-md-6 card-body">
       <h2 className="card-title">Apply</h2>
@@ -41,7 +41,7 @@ export const Apply = () => {
 export const Succeed = () => {
   return (<Fragment>
     <div className="col-md-6">
-      <img className="card-img-top" src={Succeed_img} alt="Card cap"/>
+      <img className="img-fluid card-img-top" src={Succeed_img} alt="Card cap"/>
     </div>
     <div className="col-md-6 card-body">
       <h2 className="card-title">Succeed</h2>
