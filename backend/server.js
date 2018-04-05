@@ -31,12 +31,13 @@ app.use("/contact", Contact)
 app.post('/search', (req, res) => {
 
   //bodyparser get form data to pass into function w 3 parameters
-  //asynchronous function that takes in form data that waits for results, the use cheerio to scrape h1s or id, plus links, with links save to jsonfile, send back res.object, 
+  //asynchronous function that takes in form data that waits for results, the use cheerio to scrape h1s or id, plus links, with links save to jsonfile, send back res.object,
   let level = req.body.level
   let country = req.body.country
   let subject = req.body.subject
 
   console.log(level, country, subject)
+  
   //  res.send(level)
   // axios.get(`https://www.google.ca/search?&q=best+${level}+${country}+${subject}`)
 
@@ -55,7 +56,7 @@ app.post('/search', (req, res) => {
             University: $(elem).text(),
             Ranking: " "
 
-            
+
             // searchResults.push($(elem).text())
 
           });
@@ -72,7 +73,7 @@ app.post('/search', (req, res) => {
       }
     })
   })
-      
+
       // Create the knex connection. This is used by bookshelf
       // in order to talk to our Postgres database. Replace
       // connection variables with your details
@@ -90,7 +91,7 @@ app.post('/search', (req, res) => {
       // CREATING MODELS
       // Models are the key to Bookshelf. Models are representations
       // of the schemas that we created using Knex migrations. We
-      // have to create a model for every table that we want to 
+      // have to create a model for every table that we want to
       // work with
 
       //Author model
