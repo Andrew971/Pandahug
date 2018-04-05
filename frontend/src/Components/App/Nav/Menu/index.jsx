@@ -2,34 +2,20 @@ import React, {Fragment} from 'react';
 import {NavLink} from 'react-router-dom';
 import ModalContactUs from '../../../../js/modals/ModalContactUs';
 
-export const SocialMedia = (className) => {
 
-  return (<span className={className} align="center">
-    <i className="fab fa-facebook-f" style={{
-        fontSize: '1.5rem',
-        margin: '0 1rem'
-      }}></i>
-    <i className="fab fa-instagram" style={{
-        fontSize: '1.5rem',
-        margin: '0 1rem'
-      }}></i>
-    <i className="fab fa-youtube" style={{
-        fontSize: '1.5rem',
-        margin: '0 1rem'
-      }}></i>
-  </span>);
-
-}
 
 export const Menu = (contactForm) => {
 
   return (<Fragment>
-    <SocialMedia className="order-first order-lg-last col col-sm col-md4 col-lg-2" />
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+
+    <div className="col col-sm col-md" align="right">
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText2" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-    <div className="collapse order-lg-first col-lg-7 navbar-collapse" id="navbarText" align="center">
-      <ul className="navbar-nav mr-auto">
+</div>
+
+    <div className="collapse navbar-collapse col-md col-lg-7 justify-content-end" id="navbarText2" align="center">
+      <ul className="navbar-nav">
 
         <li className="nav-item">
           <NavLink to="/search">

@@ -1,16 +1,19 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import ModalContactUs from '../../../js/modals/ModalContactUs';
 
 export const Footer = (contactForm)=> {
 
-    return (<div className="card text-center" style={{marginTop:'5rem'}}>
-      <div className="card-body">
+    return (<Fragment>
+      <footer className="text-center">
+      <div className="footer-body">
         <ModalContactUs contactForm={contactForm} />
       </div>
-      <div className="card-footer">
-          <p className="text-muted">
-          copyright
-          </p>
-      </div>
-    </div>)
+
+    </footer>
+    <div className="footer-bottom text-center">
+        <p className="text-muted">
+        copyright
+        </p>
+    </div>
+  </Fragment>)
   }

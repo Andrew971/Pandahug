@@ -2,9 +2,9 @@ import React from "react";
 
 export const Testimonial1 = () => {
   return (
-    <div className="">
-      <div className="card-body">
-        <blockquote className="blockquote mb-0">
+    <div className="testimonial" align="center">
+      <div className="testi_body">
+        <span className="mb-0">
           <p>
             Worked with Mabelle on a few common clients! She is a highly
             motivated, knowledgeable and responsible professional. Has great
@@ -12,17 +12,17 @@ export const Testimonial1 = () => {
             her way to help clients with their needs! Highly recommend her to
             any of my clients!
           </p>
-        </blockquote>
+        </span>
       </div>
-      <div className="" align="right">Business Owner in Vancouver, BC</div>
+      <div className="" align="center">Business Owner in Vancouver, BC</div>
     </div>
   );
 };
 export const Testimonial2 = () => {
   return (
-    <div className="">
-      <div className="card-body">
-        <blockquote className="blockquote mb-0">
+    <div className="testimonial" align="center">
+      <div className="testi_body">
+        <span className="mb-0">
           <p>
             I have been working with Mabelle for over two years, and she has
             been very helpful in terms of academic and career advising. Studying
@@ -33,17 +33,17 @@ export const Testimonial2 = () => {
             Mabelle’s communication style, especially how she always guides me
             to the right answer instead of spoon-feeding it
           </p>
-        </blockquote>
+        </span>
       </div>
-      <div className="" align="right">Secondary Student in Vancouver, BC</div>
+      <div className="" align="center">Secondary Student in Vancouver, BC</div>
     </div>
   );
 };
 export const Testimonial3 = () => {
   return (
-    <div className="">
-      <div className="card-body">
-        <blockquote className="blockquote mb-0">
+    <div className="testimonial" align="center">
+      <div className="testi_body">
+        <span className=" mb-0">
           <p>
             Mabelle is such a great advisor because she knows exactly what I
             need. Therefore, she can give me specific help to guide me to
@@ -56,9 +56,9 @@ export const Testimonial3 = () => {
             her in order to become more mature in my life. I will always
             appreciate the time spent with her!
           </p>
-        </blockquote>
+        </span>
       </div>
-      <div className="" align="right">University Student in Vancouver, BC</div>
+      <div className="" align="center">University Student in Vancouver, BC</div>
     </div>
   );
 };

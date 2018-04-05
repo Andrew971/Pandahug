@@ -1,8 +1,9 @@
 import React, {Fragment} from 'react';
 import Chatbot from '../../../js/chatbot';
-import {about} from '../../../js/chatbot/about'
+import {about as ChatAbout} from '../../../js/chatbot/about'
 import {About} from '../../../js/content/about'
 
+import Cards from '../../../js/Cards'
 
 import {Testimonial1, Testimonial2, Testimonial3} from '../../../js/content/testimonials'
 import Slideshow from '../../../js/Slideshow'
@@ -17,24 +18,16 @@ export const AboutUs = (props) => {
       <h2 id="">in Canada and the United States.</h2>
     </Jumbotron>
 
-    <div className="container">
-      <div className="row" align="center">
-
+      <Cards color="">
         <About/>
-      </div>
+        </Cards>
 
-      <h2 style={{
-          marginTop: '2rem'
-        }}>Testimonials
-      </h2>
-      <Slideshow>
+      <Slideshow color="">
         <Testimonial1/>
         <Testimonial2/>
         <Testimonial3/>
       </Slideshow>
 
-    </div>
-
-      <Chatbot steps={about}/>
+      <Chatbot steps={ChatAbout}/>
   </Fragment>)
 }

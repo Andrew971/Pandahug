@@ -8,7 +8,6 @@ import {Footer} from './Footer';
 import {PrivacyPolicy} from '../../js/content/privacy-policy'
 import {Switch, Route} from 'react-router-dom'
 import axios from 'axios'
-import {store} from '../../js/products'
 import {contact} from '../../js/api'
 
 export default class App extends Component {
@@ -57,7 +56,7 @@ export default class App extends Component {
             return <AboutUs {...routeProps} contactForm={this.contactForm}/>
           }}/>
         <Route path={match.url + 'store'} render={(routeProps) => {
-            return <Store {...routeProps} contactForm={this.contactForm} userName={this.state.userName} store={store}/>
+            return <Store {...routeProps} contactForm={this.contactForm} userName={this.state.userName}/>
           }}/>
         <Route path={match.url + 'privacy-policy'} render={(routeProps) => {
             return <PrivacyPolicy {...routeProps} />

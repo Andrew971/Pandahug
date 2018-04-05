@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import Chatbot from '../../../js/chatbot';
 import {home} from '../../../js/chatbot/home'
 
-import {Prepare, Apply, Succeed} from '../../../js/content/services'
+import {Prepare, Apply, Succeed} from '../../../js/content/process'
 import {Mission} from '../../../js/content/mission'
 
 import Jumbotron from '../../../js/Jumbotron'
@@ -20,20 +20,18 @@ export default class Home extends Component {
           Find your dream school. Hit the ground running. Lead with excellence.</h3>
       </Jumbotron>
 
-      <div className="container">
-        <Mission/>
-        <div className="row">
-          <Cards>
+        <Cards>
+          <Mission/>
+        </Cards>
+          <Cards color="">
             <Prepare/>
           </Cards>
-          <Cards>
+          <Cards color="">
             <Apply/>
           </Cards>
-          <Cards>
+          <Cards color="">
             <Succeed/>
           </Cards>
-        </div>
-      </div>
 
       <Chatbot steps={home}/>
 

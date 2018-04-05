@@ -1,3 +1,12 @@
+nav{
+  position:absolute;
+  top:0;
+  width:100%;
+  background-color:rgba(41,41,41,.84);
+  color:rgb(214,209,211);
+}
+
+
 .navbar-brand {
   font-family: lato;
   font-size: 2rem;
@@ -5,7 +14,11 @@
   font-weight: 900;
   /* margin-right: 5rem; */
 }
-
+.nav_menu{
+  /* position:absolute;
+  right:0; */
+  margin: 0 1rem;
+}
 .nav-link {
   font-family: lato;
   margin: auto;
@@ -15,7 +28,12 @@ a:hover {
   text-decoration: none;
 }
 
-
+.navbar-toggler{
+  margin:1rem;
+}
+.navbar-collapse{
+  flex-grow:0;
+}
 
 .navbar-text{
   float:right;

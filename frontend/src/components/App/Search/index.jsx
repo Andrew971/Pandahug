@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import './index.css';
 import Chatbot from '../../../js/chatbot';
 import {search} from '../../../js/chatbot/search'
@@ -41,13 +41,14 @@ export default class Search extends Component {
   render() {
     const {contactForm} = this.props
 
-    return (<div>
+    return (<Fragment>
 
         <Jumbotron id="searchJumbo" contactForm={contactForm}>
           <h1 className="display-4">Find your Dream School</h1>
         </Jumbotron>
 
-
+<div style={{  padding: '5rem',
+}}>
         <div className="searchForm">
           <hr/>
 
@@ -56,7 +57,7 @@ export default class Search extends Component {
             name="search" onSubmit={(event) => {
               this.searchResultCommon(event)
             }}>
-            <Label htmlFor="BestSchools">The Top Schools with Commonly Searched Majors:</Label>
+            <Label htmlFor="BestSchools">What are you looking for ?:</Label>
             <select name='studyLevel' id='levels'>
 
               <option value="undergrad">Undergraduate</option>
@@ -167,9 +168,9 @@ export default class Search extends Component {
 
         </div>
 
-
+</div>
         <Chatbot steps={search} />
 
-    </div>)
+    </Fragment>)
   }
 }
