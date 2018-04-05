@@ -14,8 +14,7 @@ export const AboutUs = (props) => {
 
   return (<Fragment>
     <Jumbotron id="aboutUsJumbo" contactForm={props.contactForm}>
-      <h2 className="display-5">We support you in your educational and career goals,</h2>
-      <h2 id="">in Canada and the United States.</h2>
+      <h2 className="display-5 " style={{color:'black',textAlign:'right'}}>We support you in your educational and career goals,<br />in Canada and the United States.</h2>
     </Jumbotron>
 
       <Cards color="">

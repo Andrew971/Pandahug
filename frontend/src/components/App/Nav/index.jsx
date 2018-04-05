@@ -26,7 +26,7 @@ export const Nav = (contactForm) => {
   return (<nav className="row align-items-center justify-content-around navbar-dark navbar-expand-lg">
 
     <NavLink className="col-12 col-sm-12 col-md col-lg navbar-brand" to="/" align="center">
-      Pandahug
+      Pandahug.ca
     </NavLink>
 
     <SocialMedia className="col col-sm col-md col-lg"/>
