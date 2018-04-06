@@ -7,7 +7,7 @@ export const Nav = (contactForm) => {
 
   return (<nav className="navbar navbar-expand-lg navbar-light bg-light" align="center">
     <NavLink className="navbar-brand" to="/">
-      Pandahug
+      Pandahug.ca
     </NavLink>
     <Menu contactForm={contactForm}/>
   </nav>)

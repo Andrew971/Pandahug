@@ -44,7 +44,7 @@ export const home=[
       },
       {
         id: '6',
-        message: 'Check out our "Search" page to learn more about great schools and majors to fit your goals and needs. Each school/university has different requirements. For example, grades, interview, essays, references and even home address! We can help you prepare. Would you like to talk to one of our advisors for a FREE initial consultation?',
+        message: 'Check out our "Search" page to learn more about great schools and majors to fit your goals and needs. Each school/university has different requirements. For example, grades, interview, essays, references... We can help you prepare. Would you like to talk to one of our advisors for a FREE initial consultation?',
         trigger: '9',
       },
       {

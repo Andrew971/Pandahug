@@ -6,7 +6,7 @@ export const Footer = (contactForm)=> {
 
     return (<div className="card text-center" style={{marginTop:'2rem'}}>
       <div className="card-header" id="universitas">
-        <h2>Pandahug</h2>
+        <h2>Pandahug.ca</h2>
       </div>
       <div className="card-body">
         <h5 className="card-title">Be strong. Ask us for help.</h5>
@@ -17,8 +17,9 @@ export const Footer = (contactForm)=> {
       <div className="card-footer">
         <div className="container">
           <p className="text-muted">
-            Disclaimer: Pandahug does not endorse and is not affiliated with any universities, colleges, or official test administrators. Test names and other trademarks are the property of the respective trademark holders. None of the trademark holders are endorsed by nor affiliated with Pandahug or this website.
+            Disclaimer: Pandahug Inc. does not endorse and is not affiliated with any universities, colleges, or official test administrators. Test names and other trademarks are the property of the respective trademark holders. None of the trademark holders are endorsed by nor affiliated with Pandahug Inc. or this website.
           </p>
+          <p className="text-muted">Copyright © 2018 Pandahug Inc. All rights reserved.</p>
         </div>
       </div>
     </div>)

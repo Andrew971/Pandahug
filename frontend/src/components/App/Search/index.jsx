@@ -159,10 +159,10 @@ export default class Search extends Component {
             <ListGroupItem>#4 California Institute of Technology (Caltech)</ListGroupItem>
             <ListGroupItem>#5 University of Cambridge</ListGroupItem>
             <ListGroupItem>#6 University of Oxford</ListGroupItem>
-            <ListGroupItem>#7 UCL (University College London)</ListGroupItem>
+            <ListGroupItem>#7 University College London (UCL)</ListGroupItem>
             <ListGroupItem>#8 Imperial College London</ListGroupItem>
             <ListGroupItem>#9 University of Chicago</ListGroupItem>
-            <ListGroupItem>#10 ETH Zurich (Swiss Federal Institute of Technology</ListGroupItem>
+          <ListGroupItem>#10 Swiss Federal Institute of Technology (ETH Zurich)</ListGroupItem>
           </ListGroup>
 
         </div>
