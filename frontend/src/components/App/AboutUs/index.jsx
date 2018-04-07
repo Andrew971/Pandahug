@@ -22,9 +22,9 @@ export const AboutUs = (props) => {
         </Cards>
 
       <Slideshow color="">
-        <Testimonial1/>
-        <Testimonial2/>
-        <Testimonial3/>
+        <Testimonial1 key="1"/>
+        <Testimonial2 key="2"/>
+        <Testimonial3 key="3"/>
       </Slideshow>
 
       <Chatbot steps={ChatAbout}/>
