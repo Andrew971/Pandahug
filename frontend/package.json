@@ -5,16 +5,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "components": "^0.1.0",
-    "jquery": "^3.3.1",
-    "material-ui": "^0.20.0",
+    "gasp": "^0.0.2",
     "react": "^16.2.0",
-    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
-    "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
-    "react-simple-chatbot": "https://github.com/LucasBassetti/react-simple-chatbot/tarball/master",
-    "reactstrap": "^4.8.0",
+    "react-simple-chatbot": "^0.2.9",
+    "react-transition-group": "^2.3.0",
+    "reactstrap": "^5.0.0",
     "styled": "^1.0.0",
     "styled-components": "^3.2.5"
   },
@@ -25,5 +23,8 @@
     "eject": "react-scripts eject"
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.5.0"
+  }
 }

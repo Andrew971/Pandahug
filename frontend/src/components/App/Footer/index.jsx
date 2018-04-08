@@ -4,6 +4,7 @@ import ModalContactUs from '../../../js/modals/ModalContactUs';
 export const Footer = (contactForm)=> {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return (<div className="card text-center" style={{marginTop:'2rem'}}>
       <div className="card-header" id="universitas">
         <h2>Pandahug.ca</h2>
@@ -29,6 +30,8 @@ export const Footer = (contactForm)=> {
       <div className="footer-body">
         <ModalContactUs contactForm={contactForm} />
       </div>
+=======
+>>>>>>> panda-as
 
     </footer>
     <div className="footer-bottom text-center">
@@ -37,5 +40,8 @@ export const Footer = (contactForm)=> {
         </p>
     </div>
   </Fragment>)
+<<<<<<< HEAD
+>>>>>>> panda-as
+=======
 >>>>>>> panda-as
   }

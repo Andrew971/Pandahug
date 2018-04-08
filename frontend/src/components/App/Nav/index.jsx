@@ -24,12 +24,15 @@ export const SocialMedia = (className) => {
 export const Nav = (contactForm) => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (<nav className="navbar navbar-expand-lg navbar-light bg-light" align="center">
     <NavLink className="navbar-brand" to="/">
 =======
   return (<nav className="row align-items-center justify-content-around navbar-dark navbar-expand-lg">
 
     <NavLink className="col-12 col-sm-12 col-md col-lg navbar-brand" to="/" align="center">
+>>>>>>> panda-as
+=======
 >>>>>>> panda-as
       Pandahug.ca
     </NavLink>

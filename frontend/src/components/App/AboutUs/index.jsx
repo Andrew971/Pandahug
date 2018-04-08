@@ -20,6 +20,7 @@ export const AboutUs = (props) => {
       <Cards color="">
         <About/>
         </Cards>
+<<<<<<< HEAD
 
       <Slideshow color="">
         <Testimonial1/>
@@ -27,6 +28,8 @@ export const AboutUs = (props) => {
         <Testimonial3/>
       </Slideshow>
 
+=======
+>>>>>>> panda-as
       <Chatbot steps={ChatAbout}/>
   </Fragment>)
 }
