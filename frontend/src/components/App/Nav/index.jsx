@@ -7,15 +7,15 @@ export const SocialMedia = (className) => {
   return (<div className={className}>
     <i className="fab fa-facebook-f" style={{
         fontSize: '1.5rem',
-        margin: '0 1rem',
+        margin: '0 1rem'
       }}></i>
     <i className="fab fa-instagram" style={{
         fontSize: '1.5rem',
-        margin: '0 1rem',
+        margin: '0 1rem'
       }}></i>
     <i className="fab fa-youtube" style={{
         fontSize: '1.5rem',
-        margin: '0 1rem',
+        margin: '0 1rem'
       }}></i>
   </div>);
 

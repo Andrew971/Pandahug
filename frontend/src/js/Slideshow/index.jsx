@@ -1,5 +1,8 @@
 import React, {Component, Children} from "react";
 import './slideshow.css';
+<<<<<<< HEAD
+=======
+>>>>>>> panda-as
 
 const Style = {
   selfAlign: 'center',
