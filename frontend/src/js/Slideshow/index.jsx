@@ -37,7 +37,6 @@ export default class Slideshow extends Component {
   componentDidMount() {
     this.setState({inState: true})
     window.addEventListener('scroll', this.handleScroll);
-    console.log(window)
   }
 
   componentWillUnmount() {
@@ -45,8 +44,6 @@ export default class Slideshow extends Component {
   }
 
   handleScroll=(e)=>{
-    console.log(this.inputRef);
-    console.log(e);
   }
 
   render() {
@@ -62,6 +59,7 @@ export default class Slideshow extends Component {
           ? color
           : 'white'}`
       }}>
+      <h1>Testimonialxs</h1>
       {
         Children.map(children, (child, i) => {
           return (<Transition  in={inState} timeout={duration} >
