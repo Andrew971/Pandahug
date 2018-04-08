@@ -4,6 +4,7 @@ import './slideshow.css';
 =======
 >>>>>>> panda-as
 
+
 const Style = {
   selfAlign: 'center',
   textAlign: 'center',
