@@ -2,7 +2,7 @@ import React, {Component, Children} from "react";
 import './slideshow.css';
 // import effect from '../animation/fadeIn';
 
-import {Transition, TransitionGroup} from 'react-transition-group';
+import {Transition} from 'react-transition-group';
 
 const Style = {
   selfAlign: 'center',
@@ -59,7 +59,7 @@ export default class Slideshow extends Component {
           ? color
           : 'white'}`
       }}>
-      <h1>Testimonialxs</h1>
+      <h1>Testimonials</h1>
       {
         Children.map(children, (child, i) => {
           return (<Transition  in={inState} timeout={duration} >
