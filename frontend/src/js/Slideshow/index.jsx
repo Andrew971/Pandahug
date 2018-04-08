@@ -1,7 +1,6 @@
 import React, {Component, Children} from "react";
 import './slideshow.css';
 // import effect from '../animation/fadeIn';
-
 import {Transition} from 'react-transition-group';
 
 const Style = {
