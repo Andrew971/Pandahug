@@ -3,6 +3,7 @@ import './slideshow.css';
 // import effect from '../animation/fadeIn';
 import {Transition} from 'react-transition-group';
 
+
 const Style = {
   selfAlign: 'center',
   textAlign: 'center',
