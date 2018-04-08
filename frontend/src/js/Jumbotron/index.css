@@ -1,12 +1,44 @@
-
-
 .jumbotron {
-    color: white;
-    background-image: url('../../Assets/images/caleb-woods.jpg');
-    background-size: cover;
-    height:700px;
-    font-family: lato;
-    text-align: center;
-    text-shadow: black;
-    border-radius:0;
+  top: 0;
+  color: white;
+  background-image: url('../../Assets/images/caleb-woods.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+  height: 100vh;
+  font-family: lato;
+  text-align: center;
+  text-shadow: black;
+  border-radius: 0;
+  padding-top: 10rem;
+  margin: 0;
+}
+
+#searchJumbo {
+  background-image: url('../../Assets/images/vadim-sherbakov.jpg');
+}
+
+#storeJumbo {
+  background-image: url('../../Assets/images/giammarco-boscaro.jpg');
+}
+
+#aboutUsJumbo {
+  background-image: url('../../Assets/images/about.jpg');
+}
+
+#h2about {
+  font-family: lato;
+  text-align: right;
+}
+
+#h2about2 {
+  font-family: lato;
+  text-align: right;
+}
+
+#h2about3 {
+  font-family: lato;
+  text-align: right;
 }

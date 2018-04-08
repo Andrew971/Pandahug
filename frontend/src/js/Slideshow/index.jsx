@@ -1,38 +1,47 @@
 import React, {Component, Children} from "react";
 import './slideshow.css';
 
+const Style = {
+  selfAlign: 'center',
+  textAlign: 'center',
+  padding: '5rem'
+}
+
 export default class Slideshow extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
-      total: 0,
-      current: 0
-    };
+      position: null
+    }
   }
 
   componentDidMount = () => {
-    const {children} = this.props;
-    this.setState({total: Children.count(children)});
-    this.interval = setInterval(this.showNext, 3000);
-  };
+    window.addEventListener('scroll', this.handleScroll)
+  }
 
+  handleScroll = (e) => {
+    const scrollTop = e.timeStamp
+    this.setState({position: scrollTop})
+  }
 
-  showNext = () => {
-    this.setState(state => ({
-      current: state.current + 1 === state.total ? 0 : state.current + 1
-    }));
-  };
+  componentWillunMount = () => {
+    window.revemoveEventListener('scroll', this.handleScroll)
+  }
 
-  componentWillunmount = () => {
-    clearInterval(this.interval);
-  };
   render() {
-    const {children} = this.props;
+    const {children, color} = this.props;
+    // const {position} = this.state;
+    // console.log(position)
+    return (<div className="fade-in col-lg-12" style={{
+        ...Style,
+        backgroundColor: `${ (color)
+          ? color
+          : 'white'}`
+      }}>
 
-    return (
-      <div className="fade-in">
-        {Children.toArray(children)}
-      </div>
-    );
+      <h2>Testimonials</h2>
+
+      {Children.toArray(children)}
+    </div>);
   }
 }

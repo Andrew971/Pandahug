@@ -1,9 +1,9 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import ModalContactUs from '../../../js/modals/ModalContactUs';
-import './index.css';
 
 export const Footer = (contactForm)=> {
 
+<<<<<<< HEAD
     return (<div className="card text-center" style={{marginTop:'2rem'}}>
       <div className="card-header" id="universitas">
         <h2>Pandahug.ca</h2>
@@ -23,4 +23,19 @@ export const Footer = (contactForm)=> {
         </div>
       </div>
     </div>)
+=======
+    return (<Fragment>
+      <footer className="text-center">
+      <div className="footer-body">
+        <ModalContactUs contactForm={contactForm} />
+      </div>
+
+    </footer>
+    <div className="footer-bottom text-center">
+        <p className="text-muted">
+        copyright
+        </p>
+    </div>
+  </Fragment>)
+>>>>>>> panda-as
   }

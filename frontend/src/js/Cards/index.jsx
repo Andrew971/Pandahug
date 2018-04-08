@@ -1,15 +1,26 @@
 import React, {Component, Children} from "react";
+import './cards.css';
 
+const Style = {
+  selfAlign: 'center',
+  textAlign: 'center',
+  padding: '5rem'
+}
 
 export default class Cards extends Component {
 
   render() {
-    const {children} = this.props;
+    const {children, color} = this.props;
 
-    return (
-      <div className="col-lg-4" align="center">
-        {Children.toArray(children)}
+    return (<div className="fade-in col-lg-12" style={{
+        ...Style,
+        backgroundColor: `${ (color)
+          ? color
+          : 'white'}`
+      }}>
+      <div className="row align-items-center">
+        {Children.only(children)}
       </div>
-    );
+    </div>);
   }
 }

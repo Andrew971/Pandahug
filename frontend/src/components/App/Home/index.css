@@ -1,10 +1,3 @@
-.chatbot {
-  margin-top: 50px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
 
 h2 {
   text-align: center;
@@ -21,20 +14,18 @@ h6 {
   text-align: center;
 }
 
-.card-img-top {
-  object-fit: cover;
-  width: 300px;
-  height: 350px;
-  align-self: center;
+.row{
+  margin-left: 0;
+  margin-right:0;
+}
+.container {
+  margin-top: 50px;
 }
 
-.card {
-  font-family: lato;
+#universitas {
+    font-family: lato;
 }
 
-.slideshow {
-  text-align: center;
-}
 .fade-in {
 	opacity: 1;
 	animation-name: fadeInOpacity;
@@ -50,4 +41,38 @@ h6 {
 	100% {
 		opacity: 1;
 	}
+}
+
+.testimonial{
+  margin:5rem;
+}
+.testi_body{
+  margin-bottom:2rem;
+}
+/* css for the footer */
+
+footer{
+  width:100%;
+  height: 70vh;
+  border: 1px black solid;
+  bottom:0;
+  background-image: url('../../../Assets/images/footer_test.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer-bottom{
+  /* border: 1px black solid; */
+  height:100%;
+  width:70%;
+  vertical-align: center;
+  margin:auto;
+}
+.footer-body{
+  /* border: 1px black solid; */
+  height:100%;
+  width:70%;
+  vertical-align: center;
+  margin:auto;
 }

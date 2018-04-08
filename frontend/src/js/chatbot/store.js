@@ -1,7 +1,7 @@
 import HelloWorld from '../../Assets/images/HelloWorld.png';
 import React from 'react';
 
-export const store=[
+export const ChatStore=[
 
   {
     id: '0',
