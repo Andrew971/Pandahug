@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './Components/App';
+import ProviderExtended from './js/providerExtended';
 
 import {
-    BrowserRouter as Router,
     Route
 } from 'react-router-dom'
 
 
 ReactDOM.render(
-    <Router>
+    <ProviderExtended>
         <Route path='/' component={App} />
-    </Router>,
+    </ProviderExtended>,
     document.getElementById('root'));

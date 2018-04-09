@@ -1,6 +1,6 @@
 import React from "react";
 
-export const About = () => {
+export const AboutEn = () => {
   return (
     <div className="row" align="center">
     <div className="col-12" align="center">

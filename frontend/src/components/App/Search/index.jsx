@@ -1,41 +1,31 @@
 import React, {Component, Fragment} from 'react';
 import './index.css';
 import Chatbot from '../../../js/chatbot';
-import {search} from '../../../js/chatbot/search'
+import {search as chatSearch} from '../../../js/chatbot/search'
 import Jumbotron from '../../../js/Jumbotron'
+import {SearchAction} from '../../../Redux/Modules/Search'
+import {withRouter} from 'react-router-dom'
+import {connect} from 'react-redux';
 
 import {Label, ListGroup, ListGroupItem} from 'reactstrap';
 import SearchResults from '../Search/SearchResults';
-import axios from 'axios';
 
-export default class Search extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      searchItems: [],
-      searchValue: ''
-    }
-  }
+class Search extends Component {
 
   searchResultCommon = (event) => {
     event.preventDefault()
+    const {dispatch} = this.props
 
-    let studyLevel = event.target.studyLevel.value;
-    let studyCommon = event.target.studyCommon.value;
-    let studyCountry = event.target.studyCountry.value;
+    let {studyLevel, studyCommon, studyCountry} = event.target;
 
-    axios.post('http://localhost:8080/search', {
-      level: studyLevel,
-      subject: studyCommon,
-      country: studyCountry
-    }).then((response) => {
-      // console.log(response.data)
-      this.setState({searchItems: response.data})
-    }).catch(function(error) {
-      // console.log(error);
-    });
-
+    dispatch(SearchAction({
+      type: 'CHANGE_DATE',
+      payload: {
+        level: studyLevel.value,
+        subject: studyCommon.value,
+        country: studyCountry.value
+      }
+    }))
   }
 
   render() {
@@ -43,18 +33,17 @@ export default class Search extends Component {
 
     return (<Fragment>
 
-        <Jumbotron id="searchJumbo" contactForm={contactForm}>
-          <h1 className="display-4">Find your Dream School</h1>
-        </Jumbotron>
+      <Jumbotron id="searchJumbo" contactForm={contactForm}>
+        <h1 className="display-4">Find your Dream School</h1>
+      </Jumbotron>
 
-<div style={{  padding: '5rem',
-}}>
+      <div style={{
+          padding: '5rem'
+        }}>
         <div className="searchForm">
           <hr/>
 
-          <form
-            action="/search" method="POST"
-            name="search" onSubmit={(event) => {
+          <form action="/search" method="POST" name="search" onSubmit={(event) => {
               this.searchResultCommon(event)
             }}>
             <Label htmlFor="BestSchools">What are you looking for ?:</Label>
@@ -148,7 +137,7 @@ export default class Search extends Component {
 
         <div>
 
-          <SearchResults searchItems={this.state.searchItems}/>
+          <SearchResults searchItems={this.props.searchItems}/>
 
         </div>
         <div className="toptenUni">
@@ -168,9 +157,16 @@ export default class Search extends Component {
 
         </div>
 
-</div>
-        <Chatbot steps={search} />
+      </div>
+      <Chatbot steps={chatSearch}/>
 
     </Fragment>)
   }
 }
+
+const mapStateToProps = (state) => {
+
+  return {searchItems: state.Search.result}
+
+}
+export default withRouter(connect(mapStateToProps)(Search));

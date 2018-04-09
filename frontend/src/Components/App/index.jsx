@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import Search from './Search'
 import Home from './Home'
-import {AboutUs} from './AboutUs'
+import AboutUs from './AboutUs'
 import Store from './Store'
 import {Nav} from './Nav'
 import {Footer} from './Footer';
 import {PrivacyPolicy} from '../../js/content/privacy-policy'
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, withRouter} from 'react-router-dom'
 import axios from 'axios'
 import {contact} from '../../js/api'
+import { connect } from 'react-redux';
 
-export default class App extends Component {
+class App extends Component {
 
   constructor() {
     super()
@@ -23,7 +24,6 @@ export default class App extends Component {
   }
 
   contactForm = (userName, age, email, phone, language, comments) => {
-    console.log('ok')
     axios.post(contact, {
       userName: userName,
       age: age,
@@ -68,3 +68,13 @@ export default class App extends Component {
     </div>);
   }
 }
+
+const mapStateToProps = (state) => {
+  // console.log(state)
+
+  return {
+
+  }
+
+}
+export default withRouter(connect(mapStateToProps)(App));
