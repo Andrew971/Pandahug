@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react';
 import ModalContactUs from '../../../js/modals/ModalContactUs';
 
-export const Footer = (contactForm)=> {
+export const Footer = ({contactForm})=> {
 
     return (<Fragment>
       <footer className="text-center">
