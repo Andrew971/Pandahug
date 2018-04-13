@@ -38,7 +38,7 @@ export const Menu = (contactForm) => {
             </h5>
           </NavLink>
         </li>
-        <ModalContactUs contactForm={contactForm}/>
+        <ModalContactUs/>
       </ul>
 
     </div>

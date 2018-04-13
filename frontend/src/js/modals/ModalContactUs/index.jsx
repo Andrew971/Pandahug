@@ -65,16 +65,16 @@ class ModalContactUs extends Component {
                   language,
                   comments
                 } = this.contactForm;
-console.log(age.value)
+
                   dispatch(ContactAction({
                     type: 'SEND_CONTACT_INFO',
                     payload: {
-                      userName: username,
-                      age: age,
-                      email: email,
-                      phone: phone,
-                      language: language,
-                      comments: comments
+                      userName: username.value,
+                      age: age.value,
+                      email: email.value,
+                      phone: phone.value,
+                      language: language.value,
+                      comments: comments.value
                     }
                   }))
 

@@ -23,26 +23,11 @@ class App extends Component {
 
   }
 
-  contactForm = (userName, age, email, phone, language, comments) => {
-    console.log('ok')
-    // axios.post(contact, {
-    //   userName: userName,
-    //   age: age,
-    //   email: email,
-    //   phone: phone,
-    //   language: language,
-    //   comments: comments
-    // }).then(function(response) {
-    //   // console.log(response);
-    // }).catch(function(error) {
-    //   // console.log(error);
-    // });
-  }
 
   render() {
     let {match} = this.props
     return (<div className="container-fluid">
-      <Nav contactForm={this.contactForm}/>
+      <Nav/>
       <Switch>
         <Route exact path="/" render={(routeProps) => {
             return <Home {...routeProps} />
@@ -57,14 +42,14 @@ class App extends Component {
             return <AboutUs {...routeProps}/>
           }}/>
         <Route path={match.url + 'store'} render={(routeProps) => {
-            return <Store {...routeProps} userName={this.state.userName}/>
+            return <Store {...routeProps} />
           }}/>
         <Route path={match.url + 'privacy-policy'} render={(routeProps) => {
             return <PrivacyPolicy {...routeProps} />
           }}/>
 
       </Switch>
-      <Footer contactForm={this.contactForm}/>
+      <Footer/>
 
     </div>);
   }

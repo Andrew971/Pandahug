@@ -6,7 +6,7 @@ export const Footer = ({contactForm})=> {
     return (<Fragment>
       <footer className="text-center">
       <div className="footer-body">
-        <ModalContactUs contactForm={contactForm} />
+        <ModalContactUs />
       </div>
 
     </footer>

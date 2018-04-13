@@ -4,7 +4,8 @@
 
 export function ContactAction(data) {
   switch (data.type) {
-      case 'CHANGE_DATE':
+      case 'SEND_CONTACT_INFO':
+      console.log(data.payload)
           return  {
               type: data.type,
               payload: data.payload
