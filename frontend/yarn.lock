@@ -3039,12 +3039,6 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
-gasp@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/gasp/-/gasp-0.0.2.tgz#ba48a71546aaad75fe1162dd74c2fc15bedffb11"
-  dependencies:
-    q "^1.0.0"
-
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -3183,6 +3177,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
+
+gsap@^1.20.4:
+  version "1.20.4"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-1.20.4.tgz#005fba2a7bfbb3b9d27bd77e1634d2bad365a86a"
 
 gzip-size@3.0.0:
   version "3.0.0"
@@ -5712,7 +5710,7 @@ punycode@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
 
-q@^1.0.0, q@^1.1.2:
+q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 

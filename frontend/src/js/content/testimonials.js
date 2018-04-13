@@ -2,7 +2,7 @@ import React from "react";
 
 export const Testimonial1 = () => {
   return (
-    <div className="testimonial" align="center">
+    <div id="photo" className="testimonial" align="center">
       <div className="testi_body">
         <span className="mb-0">
           <p>
@@ -20,7 +20,7 @@ export const Testimonial1 = () => {
 };
 export const Testimonial2 = () => {
   return (
-    <div className="testimonial" align="center">
+    <div id="photo" className="testimonial" align="center">
       <div className="testi_body">
         <span className="mb-0">
           <p>
@@ -41,7 +41,7 @@ export const Testimonial2 = () => {
 };
 export const Testimonial3 = () => {
   return (
-    <div className="testimonial" align="center">
+    <div id="photo" className="testimonial" align="center">
       <div className="testi_body">
         <span className=" mb-0">
           <p>

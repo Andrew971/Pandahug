@@ -1,29 +1,12 @@
 import React, {Component, Children} from "react";
 import './slideshow.css';
-// import effect from '../animation/fadeIn';
-import {Transition} from 'react-transition-group';
-
+import effect from '../animation/fadeIn';
 
 const Style = {
   selfAlign: 'center',
   textAlign: 'center',
   padding: '5rem'
 }
-const duration = 3;
-
-const defaultStyle = {
-  transition: `opacity ${duration}s ease-in-out`,
-  opacity: 0
-}
-
-const transitionStyles = {
-  entering: {
-    opacity: 0
-  },
-  entered: {
-    opacity: 1
-  }
-};
 
 export default class Slideshow extends Component {
   constructor() {
@@ -35,20 +18,30 @@ export default class Slideshow extends Component {
 
   }
   componentDidMount() {
-    this.setState({inState: true})
-    window.addEventListener('scroll', this.handleScroll);
+    let h1 = this.inputRef.current.offsetParent.offsetHeight;
+    let h2 = this.inputRef.current.offsetParent.offsetTop;
+    window.addEventListener('scroll', this.handleScroll.bind(this, h1, h2));
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll=(e)=>{
+  handleScroll = (h1, h2, cb) => {
+    let _window = window.scrollY;
+    if (_window >= h1 && _window <= 2000) {
+      effect.show("#photo")
+    } else {
+      effect.hide('#photo')
+    }
+  }
+
+  componentWillEnter(cb) {
+    effect.show(this.target, cb)
   }
 
   render() {
     const {children, color} = this.props;
-    const {inState} = this.state;
     // const childrenList = Children.toArray(children)
     // const test = Children.map(children, (child,i) =>{
     //   console.log(child)
@@ -59,21 +52,10 @@ export default class Slideshow extends Component {
           ? color
           : 'white'}`
       }}>
-      <h1>Testimonials</h1>
-      {
-        Children.map(children, (child, i) => {
-          return (<Transition  in={inState} timeout={duration} >
-            {
-              (state) => (<div ref={this.inputRef}  style={{
-                  ...defaultStyle,
-                  ...transitionStyles[state]
-                }}>
-                {child}
-              </div>)
-            }
-          </Transition>)
-        })
-      }
+      <div ref={this.inputRef} id="photo">
+        <h1>Testimonials</h1>
+        {Children.toArray(children)}
+      </div>
     </div>);
   }
 }

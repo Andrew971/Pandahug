@@ -24,46 +24,47 @@ class App extends Component {
   }
 
   contactForm = (userName, age, email, phone, language, comments) => {
-    axios.post(contact, {
-      userName: userName,
-      age: age,
-      email: email,
-      phone: phone,
-      language: language,
-      comments: comments
-    }).then(function(response) {
-      // console.log(response);
-    }).catch(function(error) {
-      // console.log(error);
-    });
+    console.log('ok')
+    // axios.post(contact, {
+    //   userName: userName,
+    //   age: age,
+    //   email: email,
+    //   phone: phone,
+    //   language: language,
+    //   comments: comments
+    // }).then(function(response) {
+    //   // console.log(response);
+    // }).catch(function(error) {
+    //   // console.log(error);
+    // });
   }
 
   render() {
     let {match} = this.props
     return (<div className="container-fluid">
-      <Nav/>
+      <Nav contactForm={this.contactForm}/>
       <Switch>
         <Route exact path="/" render={(routeProps) => {
-            return <Home {...routeProps} contactForm={this.contactForm}/>
+            return <Home {...routeProps} />
           }}/>
         <Route path={match.url + 'search'} render={(routeProps) => {
-            return <Search {...routeProps} contactForm={this.contactForm}/>
+            return <Search {...routeProps}/>
           }}/>
         <Route path={match.url + 'search/:searchId'} render={(routeProps) => {
-            return <Search {...routeProps} contactForm={this.contactForm}/>
+            return <Search {...routeProps}/>
           }}/>
         <Route path={match.url + 'aboutus'} render={(routeProps) => {
-            return <AboutUs {...routeProps} contactForm={this.contactForm}/>
+            return <AboutUs {...routeProps}/>
           }}/>
         <Route path={match.url + 'store'} render={(routeProps) => {
-            return <Store {...routeProps} contactForm={this.contactForm} userName={this.state.userName}/>
+            return <Store {...routeProps} userName={this.state.userName}/>
           }}/>
         <Route path={match.url + 'privacy-policy'} render={(routeProps) => {
             return <PrivacyPolicy {...routeProps} />
           }}/>
 
       </Switch>
-      <Footer/>
+      <Footer contactForm={this.contactForm}/>
 
     </div>);
   }
