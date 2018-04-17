@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import Search from './Search'
 import Home from './Home'
-import {AboutUs} from './AboutUs'
+import AboutUs from './AboutUs'
 import Store from './Store'
 import {Nav} from './Nav'
 import {Footer} from './Footer';
 import {PrivacyPolicy} from '../../js/content/privacy-policy'
-import {Switch, Route} from 'react-router-dom'
-import axios from 'axios'
-import {contact} from '../../js/api'
+import {Switch, Route, withRouter} from 'react-router-dom'
+import { connect } from 'react-redux';
 
-export default class App extends Component {
+class App extends Component {
 
   constructor() {
     super()
@@ -22,21 +21,6 @@ export default class App extends Component {
 
   }
 
-  contactForm = (userName, age, email, phone, language, comments) => {
-    console.log('ok')
-    axios.post(contact, {
-      userName: userName,
-      age: age,
-      email: email,
-      phone: phone,
-      language: language,
-      comments: comments
-    }).then(function(response) {
-      // console.log(response);
-    }).catch(function(error) {
-      // console.log(error);
-    });
-  }
 
   render() {
     let {match} = this.props
@@ -44,19 +28,19 @@ export default class App extends Component {
       <Nav/>
       <Switch>
         <Route exact path="/" render={(routeProps) => {
-            return <Home {...routeProps} contactForm={this.contactForm}/>
+            return <Home {...routeProps} />
           }}/>
         <Route path={match.url + 'search'} render={(routeProps) => {
-            return <Search {...routeProps} contactForm={this.contactForm}/>
+            return <Search {...routeProps}/>
           }}/>
         <Route path={match.url + 'search/:searchId'} render={(routeProps) => {
-            return <Search {...routeProps} contactForm={this.contactForm}/>
+            return <Search {...routeProps}/>
           }}/>
         <Route path={match.url + 'aboutus'} render={(routeProps) => {
-            return <AboutUs {...routeProps} contactForm={this.contactForm}/>
+            return <AboutUs {...routeProps}/>
           }}/>
         <Route path={match.url + 'store'} render={(routeProps) => {
-            return <Store {...routeProps} contactForm={this.contactForm} userName={this.state.userName}/>
+            return <Store {...routeProps} />
           }}/>
         <Route path={match.url + 'privacy-policy'} render={(routeProps) => {
             return <PrivacyPolicy {...routeProps} />
@@ -68,3 +52,13 @@ export default class App extends Component {
     </div>);
   }
 }
+
+const mapStateToProps = (state) => {
+  // console.log(state)
+
+  return {
+
+  }
+
+}
+export default withRouter(connect(mapStateToProps)(App));

@@ -32,7 +32,7 @@ export const Nav = (contactForm) => {
 
     <SocialMedia className="col col-sm col-md col-lg"/>
 
-    <Menu contactForm={contactForm}/>
+    <Menu/>
 
   </nav>)
 }
