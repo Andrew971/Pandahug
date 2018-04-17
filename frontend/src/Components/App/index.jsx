@@ -7,8 +7,6 @@ import {Nav} from './Nav'
 import {Footer} from './Footer';
 import {PrivacyPolicy} from '../../js/content/privacy-policy'
 import {Switch, Route, withRouter} from 'react-router-dom'
-import axios from 'axios'
-import {contact} from '../../js/api'
 import { connect } from 'react-redux';
 
 class App extends Component {
