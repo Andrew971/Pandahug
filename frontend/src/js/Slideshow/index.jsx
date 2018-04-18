@@ -42,10 +42,8 @@ export default class Slideshow extends Component {
 
   render() {
     const {children, color} = this.props;
-    // const childrenList = Children.toArray(children)
-    // const test = Children.map(children, (child,i) =>{
-    //   console.log(child)
-    // })
+
+
     return (<div className="col-lg-12" style={{
         ...Style,
         backgroundColor: `${ (color)
