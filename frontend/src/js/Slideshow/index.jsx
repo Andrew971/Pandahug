@@ -58,6 +58,7 @@ export default class Slideshow extends Component {
   render() {
     const {children, color} = this.props;
 <<<<<<< HEAD
+<<<<<<< HEAD
     // const {position} = this.state;
     // console.log(position)
     return (<div className="fade-in col-lg-12" style={{
@@ -66,6 +67,10 @@ export default class Slideshow extends Component {
     // const test = Children.map(children, (child,i) =>{
     //   console.log(child)
     // })
+=======
+
+
+>>>>>>> b3e362f5d859f83645bc3ec7984965aaabc07258
     return (<div className="col-lg-12" style={{
 >>>>>>> panda-as
         ...Style,
